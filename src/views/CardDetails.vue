@@ -2,16 +2,25 @@
     <div class="card-details">
         <Header />
 
-        <div class="content">
-            <img class="banner-image" src="https://www.codezest.in/img/projects/zzd-full.png" />
+        <div v-if="details == null" class="loading-container">
+            <img src="../assets/spinner.svg" class="loading-spinner" />
+        </div>
+
+        <div v-else class="content">
+            <img class="banner-image" :src="details.banner" />
 
             <div class="wrapper">
-                <div class="title">ZipZap Deals</div>
-                <div class="tags">Startup&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Mobile</div>
+                <div class="title">{{details.title}}</div>
+                <div class="tags">
+                    <div class="tag" v-for="tag in details.tags">{{tag}}</div>
+                </div>
 
                 <div class="description">
-                    <p>Founded in 2014 by young university students, ZipZap Deals is a startup that deals in the space of providing exclusive discounts to students at hundreds of outlets around the city.</p>
-                    <p>My role here was to single-handedly reinvent their entire platform from scratch. Read more about the work I did in this organisation by clicking on the Resume link on top-right of this page.</p>
+                    <p v-for="desc in details.description">{{desc}}</p>
+                </div>
+
+                <div class="actions">
+                    <div class="action" v-for="action in details.actions">{{action}}</div>
                 </div>
             </div>
         </div>
@@ -29,11 +38,28 @@
     @Component({
         components: {
             Header,
-            Footer
+            Footer,
+        },
+        mounted() {
+            const slug = this.$route.params.slug;
+
+            fetch(`/api/${slug}.json`)
+                .then(res => res.json())
+                .then(res => {
+                    this.details = res;
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        },
+        data() {
+            return {
+                details: null
+            }
         }
     })
 
-    export default class CardDetails extends Vue {};
+    export default class CardDetails extends Vue {}
 
 </script>
 
@@ -66,6 +92,19 @@
         margin-top: 4px;
     }
 
+    .tag {
+        display: inline-block;
+    }
+
+    .tag + .tag {
+        margin-left: 0.8rem;
+    }
+
+    .tag + .tag::before {
+        content: '•';
+        margin-right: 0.8rem;
+    }
+
     .description {
         font-weight: 300;
         color: #595e69;
@@ -73,6 +112,42 @@
         line-height: 1.4em;
         text-align: justify;
         margin-top: 24px;
+    }
+
+    .action {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: #319FD4;
+        transition: 0.1s all linear;
+        border: 1px solid #319FD4;
+    }
+
+    .action:hover {
+        color: #FFF;
+        background-color: #319FD4;
+    }
+
+    .action:active {
+        background-color: #318ec3;
+        border: 1px solid #318ec3;
+    }
+
+    .action + .action {
+        margin-left: 12px;
+    }
+
+    .loading-container {
+        text-align: center;
+        padding: 128px 0;
+    }
+
+    .loading-spinner {
+        width: 64px;
+        height: 64px;
     }
 
     @media screen and (max-width: 719px) {

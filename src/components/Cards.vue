@@ -21,41 +21,20 @@
         components: {
             Card
         },
-        data: function() {
+        data() {
             return {
-                portfolioItems: [
-                    {
-                        slug: "limetray-imprint",
-                        thumbnail: "https://www.codezest.in/img/projects/lt-imprint.png",
-                        title: "LimeTray Imprint",
-                        summary: "POS printing right from your Android device"
-                    },
-                    {
-                        slug: "beatbook",
-                        thumbnail: "https://www.codezest.in/img/projects/beatbook-featured.png",
-                        title: "Beatbook",
-                        summary: "An interactive way to learn your favourite musical instrument, for free!"
-                    },
-                    {
-                        slug: "sightcontrol",
-                        thumbnail: "https://www.codezest.in/img/projects/sightcontrol-featured.png",
-                        title: "SightControl",
-                        summary: "Detect and control smart devices around you over an augmented overlay"
-                    },
-                    {
-                        slug: "touchlock",
-                        thumbnail: "https://www.codezest.in/img/projects/touchlock-featured.png",
-                        title: "TouchLock",
-                        summary: "Interactive door-lock that unlocks with your phone's fingerprint scanner"
-                    },
-                    {
-                        slug: "prope",
-                        thumbnail: 'https://www.codezest.in/img/projects/prope-featured.png',
-                        title: 'Prope',
-                        summary: "Universal protocol for discovering IoT devices around you"
-                    }
-                ]
+                portfolioItems: []
             }
+        },
+        mounted() {
+            fetch("/api/items.json")
+                .then(res => res.json())
+                .then(res => {
+                    this.portfolioItems = res;
+                })
+                .catch(err => {
+                    console.log(err)
+                });
         }
     })
 

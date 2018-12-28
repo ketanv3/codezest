@@ -1,0 +1,14 @@
+{
+  "title": "SightControl",
+  "banner": "https://www.codezest.in/img/projects/sightcontrol-full.png",
+  "tags": ["Machine Learning", "Internet of Things"],
+  "description": [
+    "The world around us is filling with devices. We're no longer interested in connecting people through the means of social media. An even more interesting area to work on is to connect machines to other machines and enable interactivity among them.",
+    "The problem we're currently facing is the discoverability of IoT devices – be it humans or devices discovering other devices.",
+    "SightControl tackles these challenges and builds something that seems to have come from the distant future. Simply point your smartphone camera at a device you'd like to control. The system analyses the scene through advanced neural networks, makes its predictions and identifies the objects in the scene. The app then creates an augmented overlay over the screen and presents contextual information about that device.",
+    "The ability to present contextual information about real world devices so intuitively opens up windows for tremendous amounts of development in this field. Read more about this project on my blog."
+  ],
+  "actions": [
+    "Request a demo"
+  ]
+}

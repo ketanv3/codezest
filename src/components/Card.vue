@@ -18,7 +18,7 @@
 
     @Component({
         props: ['slug', 'thumbnail', 'title', 'summary'],
-        data: function() {
+        data() {
             return {
                 cardDetailsUrl: "/portfolio/" + this.slug
             }
