@@ -9,6 +9,9 @@
     "The ability to present contextual information about real world devices so intuitively opens up windows for tremendous amounts of development in this field. Read more about this project on my blog."
   ],
   "actions": [
-    "Request a demo"
+    {
+      "name": "Request a demo",
+      "href": "mailto:ketan9495@gmail.com"
+    }
   ]
 }

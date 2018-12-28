@@ -2,28 +2,28 @@
     <div class="card-details">
         <Header />
 
-        <div v-if="details == null" class="loading-container">
-            <img src="../assets/spinner.svg" class="loading-spinner" />
-        </div>
+        <LoadingSpinner v-if="details == null" />
 
-        <div v-else class="content">
-            <img class="banner-image" :src="details.banner" />
+        <transition name="fade">
+            <div v-if="details != null" class="content">
+                <img class="banner-image" :src="details.banner" />
 
-            <div class="wrapper">
-                <div class="title">{{details.title}}</div>
-                <div class="tags">
-                    <div class="tag" v-for="tag in details.tags">{{tag}}</div>
-                </div>
+                <div class="wrapper">
+                    <div class="title">{{details.title}}</div>
+                    <div class="tags">
+                        <div class="tag" v-for="tag in details.tags">{{tag}}</div>
+                    </div>
 
-                <div class="description">
-                    <p v-for="desc in details.description">{{desc}}</p>
-                </div>
+                    <div class="description">
+                        <p v-for="desc in details.description">{{desc}}</p>
+                    </div>
 
-                <div class="actions">
-                    <div class="action" v-for="action in details.actions">{{action}}</div>
+                    <div class="actions">
+                        <a v-for="action in details.actions" :href="action.href" class="action">{{action.name}}</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </transition>
 
         <Footer />
     </div>
@@ -34,11 +34,13 @@
     import { Vue, Component } from 'vue-property-decorator';
     import Header from '@/components/Header.vue';
     import Footer from '@/components/Footer.vue';
+    import LoadingSpinner from '@/components/LoadingSpinner.vue';
 
     @Component({
         components: {
             Header,
             Footer,
+            LoadingSpinner,
         },
         mounted() {
             const slug = this.$route.params.slug;
@@ -124,6 +126,7 @@
         color: #319FD4;
         transition: 0.1s all linear;
         border: 1px solid #319FD4;
+        text-decoration: none;
     }
 
     .action:hover {
@@ -140,14 +143,12 @@
         margin-left: 12px;
     }
 
-    .loading-container {
-        text-align: center;
-        padding: 128px 0;
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.5s;
     }
 
-    .loading-spinner {
-        width: 64px;
-        height: 64px;
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
     }
 
     @media screen and (max-width: 719px) {
