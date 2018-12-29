@@ -1,6 +1,6 @@
 {
   "title": "Tap5ive",
-  "banner": "https://www.codezest.in/img/projects/hi5-full.png",
+  "banner": "/img/projects/hi5-full.png",
   "tags": ["Socket.io", "Node.js", "Web App"],
   "description": [
     "Send Hi5's to strangers in real-time!",
