@@ -19,7 +19,10 @@
                     </div>
 
                     <div class="actions">
-                        <a v-for="action in details.actions" :href="action.href" class="action">{{action.name}}</a>
+                        <a class="action" v-for="action in details.actions"
+                           :href="action.href"
+                           :target="action.target ? action.target : '_blank'">{{action.name}}
+                        </a>
                     </div>
                 </div>
             </div>
@@ -127,6 +130,8 @@
         transition: 0.1s all linear;
         border: 1px solid #319FD4;
         text-decoration: none;
+        margin-right: 12px;
+        margin-bottom: 12px;
     }
 
     .action:hover {
@@ -137,10 +142,6 @@
     .action:active {
         background-color: #318ec3;
         border: 1px solid #318ec3;
-    }
-
-    .action + .action {
-        margin-left: 12px;
     }
 
     .fade-enter-active, .fade-leave-active {

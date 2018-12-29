@@ -1,0 +1,15 @@
+{
+  "title": "AmizOwned",
+  "banner": "https://www.codezest.in/img/projects/amizowned-full.png",
+  "tags": ["Mobile App", "Amity University"],
+  "description": [
+    "Used by tens of thousands of students across all Amity University campuses. AmizOwned is the only application you need to survive in Amity University!",
+    "AmizOwned helps you keep an eye on important stuff such as monitoring your attendance, viewing the timetable, and lots more in a whole new way. With a beautifully crafted design and intelligently presented information, focus only on what's important and nothing else."
+  ],
+  "actions": [
+    {
+      "name": "Get the app from Google Play",
+      "href": "https://play.google.com/store/apps/details?id=in.codezest.amizowned"
+    }
+  ]
+}

@@ -11,7 +11,8 @@
   "actions": [
     {
       "name": "Request a demo",
-      "href": "mailto:ketan9495@gmail.com"
+      "href": "mailto:ketan9495@gmail.com",
+      "target": "_self"
     }
   ]
 }

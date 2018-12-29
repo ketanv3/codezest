@@ -1,0 +1,16 @@
+{
+  "title": "ScribbleSolve",
+  "banner": "https://www.codezest.in/img/projects/scribble-solve.png",
+  "tags": ["Handwriting Recognition", "Maths", "Wolfram Alpha", "Web App"],
+  "description": [
+    "Solving math equations was never this easy!",
+    "ScribbleSolve allows you to scribble a mathematical equation like you would on paper. Then tap on the 'solve' button, and voila! You get your solution almost instantaneously.",
+    "Be it a simple calculation or a highly complex calculus problem that takes an hour to solve; now you can do it in a fraction of that time. What's better? You don't even need to install any app. ScribbleSolve runs inside your browser and syncs all your bookmarked equations so you can access them later from any device."
+  ],
+  "actions": [
+    {
+      "name": "Launch the app",
+      "href": "https://codezest.in/scribble"
+    }
+  ]
+}
