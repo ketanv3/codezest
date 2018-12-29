@@ -1,6 +1,6 @@
 {
   "title": "TouchLock",
-  "banner": "https://www.codezest.in/img/projects/touchlock-full.png",
+  "banner": "/img/projects/touchlock-full.png",
   "tags": ["IoT", "Physical Web", "Automation"],
   "description": [
     "Smart physical locks that get detected by your phone when in close proximity. To unlock, simply use your fingerprint to authenticate access. That's it, no more keys needed!",

@@ -1,6 +1,6 @@
 {
   "title": "ScribbleSolve",
-  "banner": "https://www.codezest.in/img/projects/scribble-solve.png",
+  "banner": "/img/projects/scribble-solve.png",
   "tags": ["Handwriting Recognition", "Maths", "Wolfram Alpha", "Web App"],
   "description": [
     "Solving math equations was never this easy!",

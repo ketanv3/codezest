@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.eaf319f3a17eaacfeac4a23f11154132.js"
+  "/precache-manifest.8acf688751c6143e8e718ad88d2d33ab.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "codezest"});
