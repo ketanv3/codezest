@@ -1,0 +1,20 @@
+{
+  "title": "ZipZap Deals",
+  "banner": "https://www.codezest.in/img/projects/zzd-full.png",
+  "tags": ["Startup", "Mobile App"],
+  "description": [
+    "Founded in 2014 by young university students, ZipZap Deals is a startup that deals in the space of providing exclusive discounts to students at hundreds of outlets around the city.",
+    "At the time I joined this organisation, a complete revamp from scratch was required to incorporate the changing user requirements. I had a multitude of tasks at hand to be done within a short span of 3 months as an intern.",
+    "Re-architect the entire tech-stack, set up EC2 instances and a self-hosted Parse server, develop Android apps for the users & vendors, create PWA dashboard for vendors to track sales, set-up a payment gateway, and build the website and perform SEO were some of the tasks that I did at ZipZap Deals."
+  ],
+  "actions": [
+    {
+      "name": "Get the app from Google Play",
+      "href": "https://play.google.com/store/apps/details?id=com.zipzapdeals.androidapp"
+    },
+    {
+      "name": "Website",
+      "href": "https://zipzapdeals.com/"
+    }
+  ]
+}
