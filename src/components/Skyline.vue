@@ -1,6 +1,6 @@
 <template>
     <div class="skyline">
-        <div class="tag-line">I love making <span class="highlight">beautiful apps!</span></div>
+        <div class="tag-line">I love making <span class="highlight">beautiful&nbsp;apps!</span></div>
     </div>
 </template>
 

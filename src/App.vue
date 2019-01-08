@@ -19,4 +19,13 @@
         font-family: 'MuseoSansRounded', Helvetica, Arial, sans-serif;
         color: #343b3f;
     }
+
+    ul {
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+
+    li {
+        margin-left: 1.6em;
+    }
 </style>

@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="description">
-                        <p v-for="desc in details.description">{{desc}}</p>
+                        <p v-for="desc in details.description" v-html="desc"></p>
                     </div>
 
                     <div class="actions">

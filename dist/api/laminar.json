@@ -1,0 +1,16 @@
+{
+  "title": "Laminar Service",
+  "banner": "/img/projects/laminar-full.png",
+  "tags": ["Microservices", "Distributed Apps", "Go"],
+  "description": [
+    "High throughput service that helps distributed applications cooperate and coordinate by distributing jobs among them without conflicts.",
+    "Distributed applications can request for the next job and Laminar will guarantee sequential access to the job pool while providing some nifty features like:",
+    "<ul><li>Maintain uniqueness in the job pool</li><li>Allow updates to the existing jobs</li><li>Prioritize some jobs over the others</li><li>Delay some jobs for a given amount of time</li></ul>"
+  ],
+  "actions": [
+    {
+      "name": "Read the full blog post",
+      "href": "https://github.com/LimeTray/laminar-service"
+    }
+  ]
+}

@@ -47,6 +47,7 @@
         line-height: 1.4em;
         font-weight: 300;
         color: #595e69;
+        box-sizing: border-box;
     }
 
     .credits {
