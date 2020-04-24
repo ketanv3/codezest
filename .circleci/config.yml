@@ -1,6 +1,13 @@
 version: 2.1
+
+workflows:
+  codezest-website:
+    jobs:
+      - build-and-deploy:
+          context: CodeZest Website
+
 jobs:
-  build:
+  build-and-deploy:
     docker:
       - image: circleci/node:10.16.3
     steps:
@@ -21,7 +28,6 @@ jobs:
           name: Production Build
           command: yarn build
       - run:
-          context: CodeZest Website
           name: Deploy to S3 and Invalidate CloudFront Cache
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
