@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node node_modules/s3-deploy/bin/s3-deploy './dist/**' --cwd './dist/' --region $AWS_DEFAULT_REGION --bucket $S3_BUCKET_NAME --distId $CLOUDFRONT_DIST_ID --invalidate '/' --deleteRemoved"
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",
+    "s3-deploy": "^1.4.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
