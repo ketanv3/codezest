@@ -21,6 +21,7 @@ jobs:
           name: Production Build
           command: yarn build
       - run:
+          context: CodeZest Website
           name: Deploy to S3 and Invalidate CloudFront Cache
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
