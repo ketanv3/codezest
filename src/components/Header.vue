@@ -2,7 +2,7 @@
     <div class="header">
         <RouterLink to="/"><div class="title">CodeZest</div></RouterLink>
         <div class="links">
-            <a class="link" href="https://blog.codezest.in">Blog</a>
+            <a class="link" href="https://medium.com/codezest">Blog</a>
             <a class="link" href="https://www.codezest.in/Ketan%20Verma%20-%20Resume.pdf">Resume</a>
         </div>
     </div>
